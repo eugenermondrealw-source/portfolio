@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Eugene's Portfolio
 
-## Getting Started
+A modern, high-performance developer portfolio built with **Next.js 15**, **React 19**, and **Storybook**. This project follows **Atomic Design** principles to ensure components are modular, testable, and scalable.
 
-First, run the development server:
+## 🔗 Live Links
+- **Portfolio:** [https://eugenermondrealw-source.github.io](https://eugenermondrealw-source.github.io)
+- **Storybook UI:** [https://eugenermondrealw-source.github.iostorybook/](https://eugenermondrealw-source.github.iostorybook/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🛠️ Tech Stack
+- **Framework:** [Next.js 15](https://nextjs.org) (App Router)
+- **UI Documentation:** [Storybook 10](https://storybook.js.org)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
+- **Package Manager:** [pnpm](https://pnpm.io)
+- **Type Safety:** [TypeScript](https://www.typescriptlang.org)
+- **CI/CD:** [GitHub Actions](https://github.com)
+
+## 📁 Project Structure
+The project uses **Atomic Design** to organize UI components:
+- `components/atoms`: Smallest building blocks (e.g., `RichText`).
+- `components/molecules`: Simple combinations of atoms (e.g., `PrimaryNav`).
+- `components/organisms`: Complex UI sections (e.g., `Header`, `FooterNav`, `Hero`).
+
+## 🚀 Local Development
+
+### 1. Clone & Install
+```powershell
+git clone https://github.com/eugenermondrealw-source/portfolio.git
+cd portfolio
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Run Servers
+- **Main App:** `pnpm dev` (Local: [http://localhost:3000](http://localhost:3000))
+- **Storybook:** `pnpm storybook` (Local: [http://localhost:6006](http://localhost:6006))
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Deployment
+This project is automatically deployed to **GitHub Pages** via **GitHub Actions** whenever changes are pushed to the `main` branch.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**The workflow:**
+1. **Exports** the Next.js app to static HTML (`/out`).
+2. **Builds** the Storybook static site into a subfolder (`/out/storybook`).
+3. **Deploys** the entire bundle to the `gh-pages` branch.
