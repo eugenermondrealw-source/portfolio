@@ -1,7 +1,7 @@
 "use client";
 
-import FooterNav from "@/components/molecules/FooterNav";
-import RichText from "../atoms/RichText";
+import FooterNav from "@/components/molecules/FooterNav/FooterNav";
+import RichText from "../../atoms/RichText/RichText";
 
 type FooterProps = {
   content?: string;
@@ -11,9 +11,8 @@ type FooterProps = {
 export default function Footer({ content, links }: FooterProps) {
   return (
     <footer className="w-full border-t border-zinc-200 dark:border-zinc-800">
-      <div className="max-w-5xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between text-sm text-zinc-500 dark:text-zinc-400">
+      <div className="max-w-5xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between text-base text-brand-black dark:text-white">
         <RichText content={content} />
-
         <FooterNav links={links ?? []} />
       </div>
     </footer>

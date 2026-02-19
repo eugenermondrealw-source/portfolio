@@ -21,7 +21,7 @@ export default function FooterNav({ links = [] }: FooterNavProps) {
           href={link.href}
           target={link.target || "_blank"}
           rel="noopener noreferrer"
-          className="hover:text-black dark:hover:text-white transition"
+          className="border-b border-transparent text-emerald-800 dark:text-emerald-600 transition-colors duration-300 hover:border-emerald-800 dark:hover:text-white"
         >
           {link.label}
         </Link>

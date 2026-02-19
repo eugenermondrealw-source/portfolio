@@ -12,11 +12,11 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const baseStyle =
-    "px-4 py-2 rounded font-medium transition-colors duration-200";
+    "px-5 py-2 font-medium border-2 border-emerald-800 hover:bg-transparent transition-colors duration-300";
 
   const variants = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700",
-    secondary: "bg-gray-200 text-black hover:bg-gray-300",
+    primary: "bg-emerald-800 text-white hover:text-emerald-800 dark:hover:text-white",
+    secondary: "bg-white/90 text-brand-black hover:text-emerald-800 hover:bg-emerald-800 dark:hover:text-white",
     danger: "bg-red-600 text-white hover:bg-red-700",
   };
 

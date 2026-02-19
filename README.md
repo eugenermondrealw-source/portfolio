@@ -1,4 +1,4 @@
-# 🚀 Eugene's Portfolio
+# Portfolio
 
 A modern, high-performance developer portfolio built with **Next.js 15**, **React 19**, and **Storybook**. This project follows **Atomic Design** principles to ensure components are modular, testable, and scalable.
 

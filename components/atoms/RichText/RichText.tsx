@@ -7,7 +7,7 @@ type RichTextProps = {
 
 export default function RichText({ content, className = "" }: RichTextProps) {
   return (
-    <div className={`prose dark:prose-invert max-w-full ${className}`}>
+    <div className={`prose dark:text-white max-w-full ${className}`}>
       {content}
     </div>
   );

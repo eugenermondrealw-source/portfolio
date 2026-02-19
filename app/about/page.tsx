@@ -1,4 +1,4 @@
-import Hero from "@/components/organisms/Hero";
+import Hero from "@/components/organisms/Hero/Hero";
 
 export default function AboutPage() {
   return (
