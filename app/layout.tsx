@@ -9,7 +9,7 @@ import Footer from "@/components/organisms/Footer/Footer";
 
 // Global Styles
 import "./globals.css";
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { ThemeProvider } from "next-themes";
 
 // Configure the font
 const googleSansFlex = Google_Sans_Flex({
@@ -45,7 +45,7 @@ export default function RootLayout({
     <html lang="en" className={googleSansFlex.variable} suppressHydrationWarning>
       {/* Apply the font class to the body */}
       <body className={`${googleSansFlex.className} antialiased`}>
-        <ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header content="Maze" links={PrimaryNavLinks} />
           <main className="max-w-5xl mx-auto px-6 py-12 text-base">
             {children}

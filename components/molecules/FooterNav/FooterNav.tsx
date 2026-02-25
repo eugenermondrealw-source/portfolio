@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export type FooterLink = {
   label: string;
@@ -13,19 +14,29 @@ type FooterNavProps = {
 };
 
 export default function FooterNav({ links = [] }: FooterNavProps) {
+  const pathname = usePathname();
+  
   return (
-    <div className="flex gap-6 mt-4 sm:mt-0">
-      {links.map((link, index) => (
-        <Link
-          key={index} // Using index is fine for simple static lists
-          href={link.href}
-          target={link.target || "_blank"}
-          rel="noopener noreferrer"
-          className="border-b border-transparent text-emerald-800 dark:text-emerald-600 transition-colors duration-300 hover:border-emerald-800 dark:hover:text-white"
-        >
-          {link.label}
+    <nav className="flex gap-6 mt-4 sm:mt-0">
+      {links.map((link, index) => {
+        const isActive = pathname === link.href;
+        
+        return (
+          <Link
+            key={index} // Using index is fine for simple static lists
+            href={link.href}
+            target={link.target || "_blank"}
+            rel="noopener noreferrer"
+            className={`
+              py-1 text-base font-semibold transition-all border-b-2
+              text-brand hover:border-brand
+              ${isActive ? "border-brand" : "border-transparent"}
+            `}
+          >
+            {link.label}
         </Link>
-      ))}
-    </div>
+        );
+      })}
+    </nav>
   );
 }

@@ -31,15 +31,15 @@ export default function Header({ content, links }: HeaderProps) {
     <header className={`
       ${component_name} 
       sticky top-0 left-0 w-full z-50 transition-all duration-300 py-2
-      ${isScrolled ? "bg-emerald-100 dark:bg-black/40" : "bg-transparent"}
+      ${isScrolled ? "bg-surface shadow-xs shadow-brand" : "bg-transparent"}
     `}>
-      <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-semibold tracking-tight">
-          <RichText content={content} />
+          <RichText content={content} className="text-text text-xl" />
         </Link>
 
         <PrimaryNav links={links} />
-      </nav>
+      </div>
     </header>
   );
 }

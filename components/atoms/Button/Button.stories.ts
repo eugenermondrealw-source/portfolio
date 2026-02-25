@@ -23,20 +23,43 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     variant: "primary",
-    children: "Click me",
+    children: "Primary Button",
   },
 };
 
 export const Secondary: Story = {
   args: {
     variant: "secondary",
-    children: "Click me",
+    children: "Secondary Button",
   },
 };
 
-export const Danger: Story = {
+export const Outline: Story = {
   args: {
-    variant: "danger",
-    children: "Click me",
+    variant: "outline",
+    children: "Outline Button",
+  },
+};
+
+export const Ghost: Story = {
+  args: {
+    variant: "ghost",
+    children: "Ghost Button",
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    variant: "primary",
+    children: "Disabled Button",
+    disabled: true,
+  },
+};
+
+export const WithCustomStyles: Story = {
+  args: {
+    variant: "primary",
+    children: "Custom Styled Button",
+    style: { backgroundColor: '#006045', color: '#fff', padding: '12px 24px', borderRadius: '8px' },
   },
 };

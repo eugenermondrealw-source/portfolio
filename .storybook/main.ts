@@ -13,6 +13,14 @@ const config: StorybookConfig = {
   "framework": "@storybook/nextjs-vite",
   "staticDirs": [
     "../public"
-  ]
+  ],
+  viteFinal: async (config) => {
+    config.build = {
+      ...config.build,
+      chunkSizeWarningLimit: 1000, // Silences the 500kb warning
+      sourcemap: false,           // Silences the sourcemap warning
+    };
+    return config;
+  },
 };
 export default config;

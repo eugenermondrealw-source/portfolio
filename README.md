@@ -3,8 +3,8 @@
 A modern, high-performance developer portfolio built with **Next.js 15**, **React 19**, and **Storybook**. This project follows **Atomic Design** principles to ensure components are modular, testable, and scalable.
 
 ## 🔗 Live Links
-- **Portfolio:** [https://eugenermondrealw-source.github.io](https://eugenermondrealw-source.github.io)
-- **Storybook UI:** [https://eugenermondrealw-source.github.iostorybook/](https://eugenermondrealw-source.github.iostorybook/)
+- **Portfolio:** [https://eugenermondrealw-source.github.io/portfolio/](https://eugenermondrealw-source.github.io/portfolio/)
+- **Storybook UI:** [https://eugenermondrealw-source.github.io/portfolio/storybook/](https://eugenermondrealw-source.github.io/portfolio/storybook/)
 
 ## 🛠️ Tech Stack
 - **Framework:** [Next.js 15](https://nextjs.org) (App Router)

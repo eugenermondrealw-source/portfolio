@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ThemeToggle } from "../../atoms/ThemeToggle/ThemeToggle";
 
 export type PrimaryLink = {
   label: string;
@@ -13,19 +15,30 @@ type PrimaryNavProps = {
 };
 
 export default function PrimaryNav({ links }: PrimaryNavProps) {
-	return (
-		<div className="flex gap-6 text-base">
-			{links?.map((link) => (
-				<Link
-					key={link.label}
-					href={link.href}
-					target={link.target || "_self"} 
-					rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
-					className="border-b border-transparent text-emerald-800 transition-colors duration-300 hover:border-emerald-800 dark:text-emerald-600 dark:hover:text-white"
-				>
-					{link.label}
-				</Link>
-			))}
-		</div>
-	);
+  const pathname = usePathname();
+
+  return (
+    <nav className="flex gap-8 items-center" aria-label="Main Navigation">
+      <div className="flex gap-6 items-center">
+        {links?.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link
+              key={link.label}
+              href={link.href}
+              className={`
+                py-1 text-base font-semibold transition-all border-b-2
+                text-brand hover:border-brand
+                ${isActive ? "border-brand" : "border-transparent"}
+              `}
+            >
+              {link.label}
+            </Link>
+          );
+        })}
+      </div>
+
+      <ThemeToggle />
+    </nav>
+  );
 }
