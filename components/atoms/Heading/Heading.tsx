@@ -9,12 +9,12 @@ type HeadingProps = {
 };
 
 const sizes: Record<HeadingLevel, string> = {
-  h1: "text-4xl sm:text-5xl font-bold tracking-tight",
-  h2: "text-3xl sm:text-4xl font-semibold tracking-tight",
-  h3: "text-2xl sm:text-3xl font-semibold",
-  h4: "text-xl sm:text-2xl font-medium",
-  h5: "text-lg font-medium",
-  h6: "text-base font-medium",
+  h1: "text-4xl sm:text-5xl font-bold text-brand tracking-tight",
+  h2: "text-3xl sm:text-4xl font-semibold text-brand tracking-tight",
+  h3: "text-2xl sm:text-3xl font-semibold text-brand tracking-tight",
+  h4: "text-xl sm:text-2xl font-medium text-brand tracking-tight",
+  h5: "text-lg font-medium text-brand tracking-tight",
+  h6: "text-base font-medium text-brand tracking-tight",
 };
 
 export default function Heading({

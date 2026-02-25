@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build",
     "deploy-all": "pnpm run build && pnpm run build-storybook -o out/storybook"
   },

@@ -1,22 +1,27 @@
 import { Fragment, ReactNode } from "react";
+import Link from "next/link";
 import Button from "@/components/atoms/Button/Button"; 
 import Heading from "../../atoms/Heading/Heading";
 import RichText from "../../atoms/RichText/RichText";
+import AppImage from "../../atoms/AppImage/AppImage";
 
 interface HeroProps {
   title: string;
   subtitle?: string | ReactNode;
+  name?: string;
+  location?: string;
+  age?: number;
+  email?: string;
   buttons?: { label: string; href?: string; variant?: "primary" | "secondary"; onClick?: () => void }[];
   className?: string;
 }
 
-export default function Hero({ title, subtitle, buttons = [], className = "" }: HeroProps) {
+export default function Hero({ title, subtitle, name, location, age, email, buttons = [], className = "" }: HeroProps) {
   return (
     <section className={`min-h-[70vh] flex items-center ${className}`}>
-      <div className="max-w-5xl mx-auto px-6 w-full">
-        {/* text-foreground ensures the title flips between Dark Forest and Lime */}
-        <div className="flex flex-col gap-6 max-w-2xl text-foreground"> 
-          <Heading level="h1" className="text-4xl sm:text-6xl font-bold tracking-tight">
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-6 gap-12 items-center">
+        <div className="col-span-1 lg:col-span-4 order-last lg:order-first flex flex-col gap-6 text-foreground"> 
+          <Heading level="h1">
             {title}
           </Heading>
 
@@ -24,11 +29,27 @@ export default function Hero({ title, subtitle, buttons = [], className = "" }: 
             <div className="flex flex-col gap-4 text-text max-w-prose">
               <RichText content={subtitle} className="text-lg sm:text-xl" />
             </div>
-
           )}
 
+          <div className="h-1 bg-brand"></div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-text">
+            <div className="text-base tracking-wide">
+                <strong>Name:</strong><span className="ml-2">{name}</span>
+            </div>
+            <div className="text-base tracking-wide">
+                <strong>From:</strong><span className="ml-2">{location}</span>
+            </div>
+            <div className="text-base tracking-wide">
+                <strong>Age:</strong><span className="ml-2">{age}</span>
+            </div>
+            <div className="text-base tracking-wide">
+                <strong>Email:</strong><span className="ml-2">{email}</span>
+            </div>
+          </div>
+
           {buttons.length > 0 && (
-            <div className="flex flex-wrap gap-4 mt-4">
+            <div className="flex flex-wrap gap-6">
               {buttons.map((btn, idx) => {
                 const ButtonElement = (
                   <Button variant={btn.variant} onClick={btn.onClick}>
@@ -37,15 +58,26 @@ export default function Hero({ title, subtitle, buttons = [], className = "" }: 
                 );
 
                 return btn.href ? (
-                  <a key={idx} href={btn.href} className="inline-block">
+                  <Link key={idx} href={btn.href} className="inline-block">
                     {ButtonElement}
-                  </a>
+                  </Link>
                 ) : (
                   <Fragment key={idx}>{ButtonElement}</Fragment>
                 );
               })}
             </div>
           )}
+        </div>
+        <div className="col-span-1 lg:col-span-2 flex justify-center">
+          <AppImage 
+            src = ""
+            alt="Eugene" 
+            width={450} 
+            height={450}
+            aspectRatio="square"
+            imageClassName=""
+            priority
+          />
         </div>
       </div>
     </section>

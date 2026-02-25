@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
   basePath: '/portfolio', // Replace with your actual repo name
   images: {
     unoptimized: true, // Required for static export
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
+    ],
   },
   experimental: {},
 };
