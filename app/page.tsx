@@ -13,12 +13,12 @@ export default function Home() {
         ]}
       />
       <div className="flex flex-col gap-4 max-w-2xl mx-auto mt-12">
-        <ColorSwatch variant="brand" name="Brand" />
-        <ColorSwatch variant="surface" name="Surface" />
-        <ColorSwatch variant="brand-soft" name="Brand Soft" />
-        <ColorSwatch variant="brand-highlight" name="Brand Highlight" />
-        <ColorSwatch variant="text" name="Text" />
-        <ColorSwatch variant="muted" name="Muted" />
+        <ColorSwatch variant="brand" name="Brand" className="text-surface dark:text-text" />
+        <ColorSwatch variant="surface" name="Surface" className="text-text dark:text-surface" />
+        <ColorSwatch variant="brand-soft" name="Brand Soft" className="text-text dark:text-surface" />
+        <ColorSwatch variant="brand-highlight" name="Brand Highlight" className="text-text dark:text-surface" />
+        <ColorSwatch variant="text" name="Text" className="text-surface dark:text-text" />
+        <ColorSwatch variant="muted" name="Muted" className="text-surface dark:text-text" />
       </div>
     </>
   );

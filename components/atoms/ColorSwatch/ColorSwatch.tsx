@@ -20,15 +20,12 @@ const ColorSwatch = ({
     "brand-highlight": "bg-brand-highlight",
   };
 
-  const activeVariant = variant && variantClasses[variant] ? variant : "surface";
-  const isLightVariant = ["surface", "brand-soft", "brand-highlight"].includes(activeVariant);
-
   return (
     <div className={`relative flex items-center gap-4 ${className}`} {...props}>
       <div 
-        className={`w-full h-14 border border-black/5 shadow-xl shrink-0 ${variantClasses[variant]}`} 
+        className={`w-full h-14 rounded-lg border border-black/5 shadow-xl shrink-0 ${variantClasses[variant]}`} 
       />
-      <span className={`absolute left-1/2 top-1/2 transform -translate-1/2 text-sm font-medium ${isLightVariant ? "text-black dark:text-white" : "text-white dark:text-black"}`}>{name}</span>
+      <span className="absolute left-1/2 top-1/2 transform -translate-1/2 text-sm font-semibold">{name}</span>
     </div>
   );
 };
