@@ -1,8 +1,10 @@
-import ColorSwatch from "@/components/atoms/ColorSwatch/ColorSwatch";
-import ProjectCard from "@/components/molecules/ProjectCard/ProjectCard";
 import Hero from "@/components/organisms/Hero/Hero";
-import ProjectGrid from "@/components/organisms/ProjectGrid/ProjectGrid";
+import About from "@/components/organisms/About/About";
 import Skills from "@/components/organisms/Skills/Skills";
+import ProjectGrid from "@/components/organisms/ProjectGrid/ProjectGrid";
+import Contact from "@/components/organisms/Contact/Contact";
+import { Github, Linkedin, Mail } from "lucide-react";
+import Experience from "@/components/organisms/Experience/Experience";
 
 export default function Home() {
   return (
@@ -17,6 +19,41 @@ export default function Home() {
         buttons={[
           { label: "View Projects", href: "/projects", variant: "primary" },
           { label: "Contact Me", href: "/contact", variant: "secondary" },
+        ]}
+      />
+
+      <About 
+        imageSrc=""
+        title="Crafting Digital Experiences"
+        content="I am a Frontend Developer based in Pangasinan. My journey started with a curiosity for how the web works, leading me to learn modern tools like Next.js and Tailwind CSS. <br /><br /> I specialize in building highly interactive, accessible, and performant web applications using AI-driven workflows to accelerate development without sacrificing code quality."
+        stats={[
+          { label: "Experience", value: "2+ Years" },
+          { label: "Projects", value: "15+" },
+        ]}
+      />
+
+      <Experience 
+        title="Work Experience"
+        items={[
+          {
+            company: "Tech Solutions Inc.",
+            role: "Frontend Developer",
+            duration: "Jan 2024 - Present",
+            description: [
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            ]
+          },
+          {
+            company: "Creative Web Studio",
+            role: "Web Developer",
+            duration: "June 2022 - Dec 2023",
+            description: [
+              "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            ]
+          }
         ]}
       />
 
@@ -63,14 +100,30 @@ export default function Home() {
         ]}
       />
 
-      <section className="flex flex-col gap-4 max-w-2xl mx-auto mt-12">
-        <ColorSwatch variant="brand" name="Brand" className="text-surface dark:text-text" />
-        <ColorSwatch variant="surface" name="Surface" className="text-text dark:text-surface" />
-        <ColorSwatch variant="brand-soft" name="Brand Soft" className="text-text dark:text-surface" />
-        <ColorSwatch variant="brand-highlight" name="Brand Highlight" className="text-text dark:text-surface" />
-        <ColorSwatch variant="text" name="Text" className="text-surface dark:text-text" />
-        <ColorSwatch variant="muted" name="Muted" className="text-surface dark:text-text" />
-      </section>
+      <Contact
+        title="Let's Connect"
+        subtitle="Have a project in mind? Reach out and let's build something amazing together."
+        socials={[
+          { 
+            icon: <Mail size={20} />, 
+            platform: "Email", 
+            username: "eugenermondrealw@email.com", 
+            href: "mailto:eugenermondrealw@email.com" 
+          },
+          { 
+            icon: <Github size={20} />, 
+            platform: "GitHub", 
+            username: "eugenermondrealw-source", 
+            href: "https://github.com" 
+          },
+          { 
+            icon: <Linkedin size={20} />, 
+            platform: "LinkedIn", 
+            username: "Eugene Mondreal", 
+            href: "https://linkedin.com" 
+          },
+        ]}
+      />
 
     </>
   );

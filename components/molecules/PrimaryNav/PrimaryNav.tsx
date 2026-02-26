@@ -19,7 +19,7 @@ export default function PrimaryNav({ links }: PrimaryNavProps) {
 
   return (
     <nav className="flex gap-8 items-center" aria-label="Main Navigation">
-      <div className="flex gap-6 items-center">
+      <div className="hidden sm:flex gap-6 items-center">
         {links?.map((link) => {
           const isActive = pathname === link.href;
           return (

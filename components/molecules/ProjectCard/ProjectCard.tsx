@@ -31,7 +31,7 @@ export default function ProjectCard({ title, description, imageSrc, tags, link }
       <div className="flex flex-1 flex-col p-6 lg:p-8">
         <div className="mb-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <span key={tag} className="rounded-full bg-brand-highlight px-3 py-1 text-xs font-bold tracking-wide text-highlight uppercase">
+            <span key={tag} className="rounded-full bg-brand-highlight px-3 py-1 text-sm font-semibold tracking-wide text-highlight">
               {tag}
             </span>
           ))}
@@ -41,7 +41,7 @@ export default function ProjectCard({ title, description, imageSrc, tags, link }
           {title}
         </Heading>
 
-        <p className="mb-6 line-clamp-3 text-sm leading-relaxed text-text">
+        <p className="mb-6 line-clamp-3 text-base leading-relaxed text-text">
           {description}
         </p>
 

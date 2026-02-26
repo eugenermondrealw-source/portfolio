@@ -16,7 +16,7 @@ export default function Skills({
   skills = [],
 }: SkillsProps) {
   return (
-    <section className="py-20 px-6 max-w-5xl mx-auto">
+    <section className="py-20 max-w-5xl mx-auto">
       <div className="flex flex-col gap-12">
         <Heading level="h2" className="text-3xl font-bold">
           {title}

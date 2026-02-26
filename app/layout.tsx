@@ -10,6 +10,7 @@ import Footer from "@/components/organisms/Footer/Footer";
 // Global Styles
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import BackToTop from "@/components/atoms/BackToTop/BackToTop";
 
 // Configure the font
 const googleSansFlex = Google_Sans_Flex({
@@ -52,6 +53,7 @@ export default function RootLayout({
           </main>
           <Footer content={`© ${new Date().getFullYear()} Maze`} links={FooterNavLinks} />
         </ThemeProvider>
+        <BackToTop />
       </body>
     </html>
   );
