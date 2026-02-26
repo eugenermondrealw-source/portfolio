@@ -22,7 +22,7 @@ export default function About({
         {/* LEFT: Image & Stats (Spans 5) */}
         <div className="lg:col-span-5 flex flex-col gap-8">
           <AppImage 
-            src={imageSrc} 
+            src={imageSrc}
             alt="Eugene Mondreal"
             aspectRatio="square"
             imageClassName="rounded-xl shadow-2xl border-2 border-brand/10 grayscale hover:grayscale-0 transition-all duration-700"

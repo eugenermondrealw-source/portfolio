@@ -23,7 +23,7 @@ export default function Contact({
         <div className="flex flex-col gap-8">
           <div>
             <Heading level="h2" className="text-4xl font-bold mb-4">{title}</Heading>
-            <p className="text-muted text-lg max-w-md">{subtitle}</p>
+            <p className="text-text text-lg max-w-md">{subtitle}</p>
           </div>
 
           <div className="flex flex-col gap-4">
@@ -39,16 +39,16 @@ export default function Contact({
             <div className="flex flex-col gap-2">
               <label className="text-sm font-bold text-brand ml-1">Name</label>
               {/* Added focus:border-brand for better UI */}
-              <input type="text" placeholder="John Doe" className="p-3 rounded-xl bg-background border border-brand/10 focus:outline-none focus:ring-2 focus:ring-brand/20 transition-all" />
+              <input type="text" placeholder="John Doe" className="p-3 rounded-xl bg-background border border-brand/10 focus:outline-none focus:ring-2 focus:ring-brand/20 transition-all text-text" />
             </div>
             <div className="flex flex-col gap-2">
               <label className="text-sm font-bold text-brand ml-1">Email</label>
-              <input type="email" placeholder="john@example.com" className="p-3 rounded-xl bg-background border border-brand/10 focus:outline-none focus:ring-2 focus:ring-brand/20 transition-all" />
+              <input type="email" placeholder="john@example.com" className="p-3 rounded-xl bg-background border border-brand/10 focus:outline-none focus:ring-2 focus:ring-brand/20 transition-all text-text" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
             <label className="text-sm font-bold text-brand ml-1">Message</label>
-            <textarea rows={4} placeholder="How can I help you?" className="p-3 rounded-xl bg-background border border-brand/10 focus:outline-none focus:ring-2 focus:ring-brand/20 transition-all resize-none" />
+            <textarea rows={4} placeholder="How can I help you?" className="p-3 rounded-xl bg-background border border-brand/10 focus:outline-none focus:ring-2 focus:ring-brand/20 transition-all resize-none text-text" />
           </div>
           <Button variant="primary" className="w-full py-4 gap-2">
             Send Message <Send size={18} />

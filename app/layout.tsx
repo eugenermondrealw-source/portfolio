@@ -16,13 +16,15 @@ import BackToTop from "@/components/atoms/BackToTop/BackToTop";
 const googleSansFlex = Google_Sans_Flex({
   subsets: ["latin"],
   display: "swap",
-  adjustFontFallback: false,
+  adjustFontFallback: true,
   variable: "--font-google-sans-flex",
 });
 
 export const metadata: Metadata = {
-  title: "Maze | Portfolio",
-  description: "Modern portfolio built with Next.js and Storybook using atomic design principles.",
+  title: "Eugene | Frontend Developer Portfolio",
+  description: "Frontend Developer specializing in React, Next.js, and Atomic Design. Explore my projects and professional experience.",
+  metadataBase: new URL("https://eugenermondrealw-source.github.io"),
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({

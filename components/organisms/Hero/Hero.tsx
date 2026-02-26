@@ -18,7 +18,7 @@ interface HeroProps {
 
 export default function Hero({ title, subtitle, name, location, age, email, buttons = [], className = "" }: HeroProps) {
   return (
-    <section className={`min-h-[70vh] flex items-center ${className}`}>
+    <section className={`min-h-[600px] lg:h-[80vh] flex items-center ${className}`}>
       <div className="mx-auto grid grid-cols-1 lg:grid-cols-6 gap-12 items-center">
         <div className="col-span-1 lg:col-span-4 order-last lg:order-first flex flex-col gap-6 text-foreground"> 
           <Heading level="h1">
@@ -35,16 +35,16 @@ export default function Hero({ title, subtitle, name, location, age, email, butt
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-text">
             <div className="text-base tracking-wide">
-                <strong>Name:</strong><span className="ml-2">{name}</span>
+                <strong className="text-brand">Name:</strong><span className="ml-2">{name}</span>
             </div>
             <div className="text-base tracking-wide">
-                <strong>From:</strong><span className="ml-2">{location}</span>
+                <strong className="text-brand">From:</strong><span className="ml-2">{location}</span>
             </div>
             <div className="text-base tracking-wide">
-                <strong>Age:</strong><span className="ml-2">{age}</span>
+                <strong className="text-brand">Age:</strong><span className="ml-2">{age}</span>
             </div>
             <div className="text-base tracking-wide">
-                <strong>Email:</strong><span className="ml-2">{email}</span>
+                <strong className="text-brand">Email:</strong><span className="ml-2">{email}</span>
             </div>
           </div>
 
@@ -70,13 +70,13 @@ export default function Hero({ title, subtitle, name, location, age, email, butt
         </div>
         <div className="col-span-1 lg:col-span-2 flex justify-center">
           <AppImage 
-            src = ""
-            alt="Eugene" 
+            src = "https://picsum.photos/id/91/300/300"
+            alt="Eugene's Profile Picture" 
             width={450} 
             height={450}
             aspectRatio="square"
             imageClassName=""
-            priority
+            priority={true}
           />
         </div>
       </div>

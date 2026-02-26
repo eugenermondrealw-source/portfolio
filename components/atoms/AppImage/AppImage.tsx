@@ -5,6 +5,7 @@ type AppImageProps = Omit<ImageProps, "className" | "src"> & {
   containerClassName?: string;
   imageClassName?: string;
   aspectRatio?: "square" | "video" | "auto";
+  priority?: boolean; // Add this back as an optional prop
 };
 
 const aspectRatios = {
@@ -19,12 +20,13 @@ export default function AppImage({
   aspectRatio = "auto",
   containerClassName = "", 
   imageClassName = "",
+  priority = false, // Default to false
   ...props 
 }: AppImageProps) {
-  const width = props.width || 800;
-  const height = props.height || 600;
-  const randomSeed = Math.floor(Math.random() * 1084);
-  const fallbackSrc = `https://picsum.photos/id/${randomSeed}/${width}/${height}`;
+  const width = Number(props.width) || 300;
+  const height = Number(props.height) || 300;
+  
+  const fallbackSrc = `https://picsum.photos/${width}/${height}`;
 
   return (
     <div className={`relative overflow-hidden ${aspectRatios[aspectRatio]} ${containerClassName}`}>
@@ -33,7 +35,10 @@ export default function AppImage({
         alt={alt}
         width={width}
         height={height}
-        className={`w-full h-full object-cover transition-all duration-500 ${imageClassName}`}
+        // Use priority prop dynamically
+        priority={priority}
+        // Use "rounded-lg" or similar if you have gaps appearing
+        className={`w-full h-full object-cover transition-opacity duration-500 ${imageClassName}`}
         {...props}
       />
     </div>

@@ -5,6 +5,7 @@ import ProjectGrid from "@/components/organisms/ProjectGrid/ProjectGrid";
 import Contact from "@/components/organisms/Contact/Contact";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Experience from "@/components/organisms/Experience/Experience";
+import ColorSwatch from "@/components/atoms/ColorSwatch/ColorSwatch";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
       />
 
       <About 
-        imageSrc=""
+        imageSrc="https://picsum.photos/id/860/350/350"
         title="Crafting Digital Experiences"
         content="I am a Frontend Developer based in Pangasinan. My journey started with a curiosity for how the web works, leading me to learn modern tools like Next.js and Tailwind CSS. <br /><br /> I specialize in building highly interactive, accessible, and performant web applications using AI-driven workflows to accelerate development without sacrificing code quality."
         stats={[
@@ -79,21 +80,21 @@ export default function Home() {
           {
             title: "E-Commerce Platform",
             description: "A full-scale online store built with Next.js 15 and Tailwind 4. Featuring real-time inventory and AI-driven recommendations.",
-            imageSrc: "",
+            imageSrc: "https://picsum.photos/id/654/300/170",
             tags: ["Next.js", "Tailwind", "PostgreSQL"],
             link: "#",
           },
           {
             title: "AI Dashboard",
             description: "Monitoring tool for LLM performance. Includes dark mode support and real-time data visualization.",
-            imageSrc: "",
+            imageSrc: "https://picsum.photos/id/1065/300/170",
             tags: ["React", "TypeScript", "AI"],
             link: "#",
           },
           {
             title: "Creative Portfolio",
             description: "A minimalist approach to showing creative work. Focused on performance and smooth page transitions.",
-            imageSrc: "",
+            imageSrc: "https://picsum.photos/id/743/300/170",
             tags: ["Storybook", "Framer Motion"],
             link: "#",
           },

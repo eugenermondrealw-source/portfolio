@@ -37,7 +37,7 @@ export default function SocialLink({ icon, platform, username, href }: SocialLin
         </div>
         <div className="flex flex-col min-w-0">
           <p className="text-xs font-bold text-muted uppercase tracking-widest">{platform}</p>
-          <p className="text-base font-semibold text-foreground truncate">
+          <p className="text-base font-semibold text-text truncate">
             {username}
           </p>
         </div>
