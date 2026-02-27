@@ -37,7 +37,7 @@ export default function Hero({
   className = "" 
 }: HeroProps) {
   return (
-    <section className={`min-h-[600px] lg:h-[80vh] flex items-center ${className}`}>
+    <section className={`min-h-[600px] lg:h-[80vh] flex items-center pbe-24 lg:pbe-0 ${className}`}>
       <div className="mx-auto grid grid-cols-1 lg:grid-cols-6 gap-12 items-center">
         <div className="lg:col-span-4 order-last lg:order-first flex flex-col gap-6 text-foreground"> 
           <Heading level="h1">

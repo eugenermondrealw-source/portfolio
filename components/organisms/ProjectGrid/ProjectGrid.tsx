@@ -11,7 +11,7 @@ export default function ProjectGrid({
   projects = [],
 }: ProjectGridProps) {
   return (
-    <section className="mx-auto max-w-7xl py-20">
+    <section className="mx-auto max-w-7xl py-20 border-t border-brand/25">
       <div className="mb-16 flex flex-col items-center text-center">
         <Heading level="h2" className="mb-4 text-4xl font-extrabold">
           {title}

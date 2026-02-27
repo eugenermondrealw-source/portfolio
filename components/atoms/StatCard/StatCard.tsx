@@ -41,7 +41,7 @@ export default function StatCard({ label, value, delay = 0 }: StatCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
     >
-      <div className="p-4 rounded-2xl bg-surface border border-brand/5 text-center shadow-sm hover:shadow-md transition-shadow">
+      <div className="h-full flex flex-col items-center justify-center p-6 lg:p-4 rounded-2xl bg-surface border border-gray-100 shadow-sm transition-all hover:shadow-md">
         <p className="text-2xl font-bold text-brand">
           <AnimatedNumber value={value} />
         </p>

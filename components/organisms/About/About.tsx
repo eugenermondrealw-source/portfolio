@@ -19,7 +19,7 @@ export default function About({
   tags = []
 }: AboutProps) {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24 border-t border-brand/5">
+    <section className="mx-auto max-w-6xl py-24 border-t border-brand/25">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
 
         {/* LEFT: Image & Stats (Spans 5) */}
@@ -32,7 +32,7 @@ export default function About({
           />
 
           {/* Quick Stats Grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 auto-rows-fr">
             {stats.map((stat, index) => (
               <StatCard
                 key={stat.label}
