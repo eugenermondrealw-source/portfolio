@@ -1,6 +1,6 @@
 "use client";
 import { RefObject, useEffect, useRef } from "react";
-import { HTMLMotionProps, motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 
 interface StatCardProps {
   label: string;
@@ -33,23 +33,22 @@ function AnimatedNumber({ value }: { value: string }) {
   return <span ref={ref}>0{suffix}</span>;
 }
 
-const MotionDiv = motion.div as React.FC<HTMLMotionProps<"div">>;
-
 export default function StatCard({ label, value, delay = 0 }: StatCardProps) {
   return (
-    <MotionDiv
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="p-4 rounded-2xl bg-surface border border-brand/5 text-center shadow-sm hover:shadow-md transition-shadow"
     >
-      <p className="text-2xl font-bold text-brand">
-        <AnimatedNumber value={value} />
-      </p>
-      <p className="text-[10px] font-bold text-text uppercase tracking-widest mt-1">
-        {label}
-      </p>
-    </MotionDiv>
+      <div className="p-4 rounded-2xl bg-surface border border-brand/5 text-center shadow-sm hover:shadow-md transition-shadow">
+        <p className="text-2xl font-bold text-brand">
+          <AnimatedNumber value={value} />
+        </p>
+        <p className="text-[10px] font-bold text-text uppercase tracking-widest mt-1">
+          {label}
+        </p>
+      </div>
+    </motion.div>
   );
 }
