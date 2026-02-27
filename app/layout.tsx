@@ -21,11 +21,14 @@ const googleSansFlex = Google_Sans_Flex({
 });
 
 export const metadata: Metadata = {
-  title: "Eugene | Frontend Developer Portfolio",
-  description: "Frontend Developer specializing in React, Next.js, and Atomic Design. Explore my projects and professional experience.",
   metadataBase: new URL("https://eugenermondrealw-source.github.io"),
-  alternates: { canonical: "/" },
+  title: {
+    default: "Eugene | Frontend Developer",
+    template: "%s | Eugene"
+  },
+  description: "Frontend Developer Portfolio",
 };
+
 
 export default function RootLayout({
   children,
@@ -53,7 +56,7 @@ export default function RootLayout({
           <main className="max-w-5xl mx-auto px-6 py-12 text-base">
             {children}
           </main>
-          <Footer content={`© ${new Date().getFullYear()} Maze`} links={FooterNavLinks} />
+          <Footer content={`© ${new Date().getFullYear()} Eugene`} links={FooterNavLinks} />
         </ThemeProvider>
         <BackToTop />
       </body>

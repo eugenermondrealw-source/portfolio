@@ -12,7 +12,9 @@
     "deploy-all": "pnpm run build && pnpm run build-storybook -o out/storybook"
   },
   "dependencies": {
+    "framer": "^2.4.1",
     "lucide-react": "^0.575.0",
+    "motion": "^12.34.3",
     "next": "16.1.6",
     "next-themes": "^0.4.6",
     "react": "19.2.3",

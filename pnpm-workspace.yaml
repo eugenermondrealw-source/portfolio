@@ -1,7 +1,8 @@
 packages:
-  - '.'
+  - .
 
 onlyBuiltDependencies:
   - esbuild
+  - framer
   - sharp
   - unrs-resolver

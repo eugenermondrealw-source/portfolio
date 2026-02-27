@@ -12,15 +12,34 @@ interface HeroProps {
   location?: string;
   age?: number;
   email?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number; 
+  aspectRatio?: "square" | "video" | "auto";
   buttons?: { label: string; href?: string; variant?: "primary" | "secondary"; onClick?: () => void }[];
   className?: string;
 }
 
-export default function Hero({ title, subtitle, name, location, age, email, buttons = [], className = "" }: HeroProps) {
+export default function Hero({ 
+  title, 
+  subtitle, 
+  name, 
+  location, 
+  age, 
+  email, 
+  imageSrc = "https://picsum.photos/id/91/300/300",
+  imageAlt = "Profile Picture",
+  imageWidth = 450,
+  imageHeight = 450,
+  aspectRatio = "square",
+  buttons = [], 
+  className = "" 
+}: HeroProps) {
   return (
     <section className={`min-h-[600px] lg:h-[80vh] flex items-center ${className}`}>
       <div className="mx-auto grid grid-cols-1 lg:grid-cols-6 gap-12 items-center">
-        <div className="col-span-1 lg:col-span-4 order-last lg:order-first flex flex-col gap-6 text-foreground"> 
+        <div className="lg:col-span-4 order-last lg:order-first flex flex-col gap-6 text-foreground"> 
           <Heading level="h1">
             {title}
           </Heading>
@@ -68,13 +87,13 @@ export default function Hero({ title, subtitle, name, location, age, email, butt
             </div>
           )}
         </div>
-        <div className="col-span-1 lg:col-span-2 flex justify-center">
+        <div className="lg:col-span-2 flex justify-center">
           <AppImage 
-            src = "https://picsum.photos/id/91/300/300"
-            alt="Eugene's Profile Picture" 
-            width={450} 
-            height={450}
-            aspectRatio="square"
+            src={imageSrc}
+            alt={imageAlt} 
+            width={imageWidth} 
+            height={imageHeight}
+            aspectRatio={aspectRatio}
             imageClassName=""
             priority={true}
           />

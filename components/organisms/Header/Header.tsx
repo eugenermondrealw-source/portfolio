@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import PrimaryNav from "../../molecules/PrimaryNav/PrimaryNav";
 import RichText from "../../atoms/RichText/RichText";
+import { Logo } from "@/components/atoms/Logo/Logo";
 
 type HeaderProps = {
   content: string;
@@ -33,7 +34,7 @@ export default function Header({ content, links }: HeaderProps) {
     `}>
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-semibold tracking-tight z-50">
-          <RichText content={content} className="text-text text-xl" />
+          <Logo />
         </Link>
 
         {/* Desktop Nav & Theme Toggle */}

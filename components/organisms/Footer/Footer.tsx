@@ -17,7 +17,7 @@ export default function Footer({
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
         
         {/* Left: Branding / Copyright */}
-        <div className="text-sm font-medium text-muted">
+        <div className="text-sm font-medium text-text">
           <RichText content={content} className="text-center md:text-left" />
         </div>
 
