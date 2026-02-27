@@ -1,6 +1,6 @@
 "use client";
 import { RefObject, useEffect, useRef } from "react";
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import { HTMLMotionProps, motion, useInView, useMotionValue, useSpring } from "framer-motion";
 
 interface StatCardProps {
   label: string;
@@ -33,9 +33,11 @@ function AnimatedNumber({ value }: { value: string }) {
   return <span ref={ref}>0{suffix}</span>;
 }
 
+const MotionDiv = motion.div as React.FC<HTMLMotionProps<"div">>;
+
 export default function StatCard({ label, value, delay = 0 }: StatCardProps) {
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -48,6 +50,6 @@ export default function StatCard({ label, value, delay = 0 }: StatCardProps) {
       <p className="text-[10px] font-bold text-text uppercase tracking-widest mt-1">
         {label}
       </p>
-    </motion.div>
+    </MotionDiv>
   );
 }
