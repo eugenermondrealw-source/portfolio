@@ -5,7 +5,6 @@ import { Menu, X } from "lucide-react"; // Import these
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import PrimaryNav from "../../molecules/PrimaryNav/PrimaryNav";
-import RichText from "../../atoms/RichText/RichText";
 import { Logo } from "@/components/atoms/Logo/Logo";
 
 type HeaderProps = {
@@ -13,13 +12,18 @@ type HeaderProps = {
   links: { label: string; href: string; target?: "_blank" | "_self" }[];
 };
 
-export default function Header({ content, links }: HeaderProps) {
+export default function Header({ links }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   // Close menu when route changes
-  useEffect(() => setIsMenuOpen(false), [pathname]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);

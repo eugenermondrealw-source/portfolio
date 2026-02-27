@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Github, Mail, Linkedin, Twitter } from "lucide-react";
+import type { Meta, StoryObj } from "@storybook/nextjs";
+import { Github, Mail, Linkedin } from "lucide-react";
 import SocialLink from "./SocialLink";
 
 const meta = {

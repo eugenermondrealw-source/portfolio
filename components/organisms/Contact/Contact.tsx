@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import Heading from "../../atoms/Heading/Heading";
 import Button from "../../atoms/Button/Button";
 import SocialLink, { SocialLinkProps } from "../../atoms/SocialLink/SocialLink";

@@ -10,7 +10,7 @@ export type ProjectItem = {
   link: string;
 };
 
-export default function ProjectCard({ title, description, imageSrc, tags, link }: ProjectItem) {
+export default function ProjectCard({ title, description, imageSrc, tags }: ProjectItem) {
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-lg border border-brand/10 bg-surface shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
       {/* Project Image Container */}

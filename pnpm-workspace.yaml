@@ -2,6 +2,7 @@ packages:
   - .
 
 onlyBuiltDependencies:
+  - core-js-pure
   - esbuild
   - framer
   - sharp

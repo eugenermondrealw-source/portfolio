@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, use, useState } from "react";
+import { ReactNode, useState } from "react";
 import { Copy, Check } from "lucide-react"; // Import copy icons
 
 export type SocialLinkProps = {

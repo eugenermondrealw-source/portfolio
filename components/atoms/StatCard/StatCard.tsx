@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef } from "react";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 
 interface StatCardProps {
@@ -16,7 +16,7 @@ function AnimatedNumber({ value }: { value: string }) {
 
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { damping: 20, stiffness: 120 });
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref as RefObject<Element>, { once: true, margin: "-50px" });
 
   useEffect(() => {
     if (isInView) motionValue.set(numericValue);
