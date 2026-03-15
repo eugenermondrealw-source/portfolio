@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AppImage from "../../atoms/AppImage/AppImage";
 import Heading from "../../atoms/Heading/Heading";
 import Button from "../../atoms/Button/Button";
@@ -10,7 +11,7 @@ export type ProjectItem = {
   link: string;
 };
 
-export default function ProjectCard({ title, description, imageSrc, tags }: ProjectItem) {
+export default function ProjectCard({ title, description, imageSrc, tags, link }: ProjectItem) {
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-lg border border-brand/10 bg-surface shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
       {/* Project Image Container */}
@@ -46,9 +47,11 @@ export default function ProjectCard({ title, description, imageSrc, tags }: Proj
         </p>
 
         <div className="mt-auto">
-          <Button variant="outline" className="w-full lg:w-auto">
-            View Case Study
-          </Button>
+          <Link href={link} target="_blank" rel="noopener noreferrer" className="inline-block w-full lg:w-auto">
+            <Button variant="outline" className="w-full lg:w-auto">
+              View Case Study
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

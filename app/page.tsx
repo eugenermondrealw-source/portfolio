@@ -8,7 +8,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import Experience from "@/components/organisms/Experience/Experience";
 
 export const metadata: Metadata = {
-  title: "Eugene | Frontend Developer Portfolio",
+  title: "Eugene | Projects",
   description: "Frontend Developer specializing in React, Next.js, and Atomic Design. Explore my projects and professional experience.",
   alternates: { 
     canonical: "/about" 
@@ -24,7 +24,7 @@ export default function Home() {
         name="Eugene Mondreal"
         location="Aguilar, Pangasinan, PH"
         age={32}
-        email="contact@example.com"
+        email="eugenermondrealw@email.com"
         buttons={[
           { label: "View Projects", href: "/projects", variant: "primary" },
           { label: "Contact Me", href: "/contact", variant: "secondary" },
@@ -110,11 +110,11 @@ export default function Home() {
             link: "#",
           },
           {
-            title: "AI Dashboard",
-            description: "Monitoring tool for LLM performance. Includes dark mode support and real-time data visualization.",
-            imageSrc: "https://picsum.photos/id/1065/300/170",
-            tags: ["React", "TypeScript", "AI"],
-            link: "#",
+            title: "Quiz System",
+            description: "A full-stack quiz management platform where admins and teachers can create, assign, and analyze quizzes, while students complete assigned quizzes and track their results.",
+            imageSrc: "quizsystem_card.svg",
+            tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+            link: "https://quizsystem-sooty.vercel.app/login",
           },
           {
             title: "Creative Portfolio",

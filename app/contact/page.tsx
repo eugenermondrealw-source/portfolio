@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import Contact from "@/components/organisms/Contact/Contact";
 
 export const metadata: Metadata = {
-  title: "Contact Me",
+  title: "Eugene | Contact Me",
   description: "Get in touch with me to discuss your next web development project.",
   alternates: {
     canonical: "/contact"

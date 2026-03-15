@@ -3,7 +3,7 @@ import Hero from "@/components/organisms/Hero/Hero";
 import Experience from "@/components/organisms/Experience/Experience";
 
 export const metadata: Metadata = {
-  title: "About Me",
+  title: "Eugene |About Me",
   description: "Learn about my journey and technical skills in web development.",
   alternates: {
     canonical: "/about"
