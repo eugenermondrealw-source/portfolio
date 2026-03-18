@@ -112,16 +112,16 @@ export default function Home() {
           {
             title: "Quiz System",
             description: "A full-stack quiz management platform where admins and teachers can create, assign, and analyze quizzes, while students complete assigned quizzes and track their results.",
-            imageSrc: "quizsystem_card.svg",
+            imageSrc: "quizsystem_card_thumbnail.svg",
             tags: ["Next.js", "TypeScript", "Tailwind CSS"],
             link: "https://quizsystem-sooty.vercel.app/login",
           },
           {
-            title: "Creative Portfolio",
-            description: "A minimalist approach to showing creative work. Focused on performance and smooth page transitions.",
-            imageSrc: "https://picsum.photos/id/743/300/170",
-            tags: ["Storybook", "Framer Motion"],
-            link: "#",
+            title: "Travel Journal",
+            description: "My Travel Journal — A personal travel journal built with Next.js 15, React 19, and Tailwind CSS v4. Features a bento grid destinations page with real-time search and category filtering, individual destination pages with photo galleries and Google Maps embeds, a wishlist/explore page, and optional Storyblok CMS integration. Designed with a dark forest-green palette, WCAG AA accessible, and deployed on Vercel.",
+            imageSrc: "travel_journal_thumbnail.svg",
+            tags: ["Storyblok", "Next.js", "Tailwind", "Vercel"],
+            link: "https://travel-portfolio-inky.vercel.app/",
           },
         ]}
       />
