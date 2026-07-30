@@ -103,10 +103,10 @@ export default function Home() {
         title="Featured Projects"
         projects={[
           {
-            title: "E-Commerce Platform",
-            description: "A full-scale online store built with Next.js 15 and Tailwind 4. Featuring real-time inventory and AI-driven recommendations.",
-            imageSrc: "https://picsum.photos/id/654/300/170",
-            tags: ["Next.js", "Tailwind", "PostgreSQL"],
+            title: "slug ⇄ unslug",
+            description: "A tiny, single-file web tool that converts text to and from URL slugs.",
+            imageSrc: "slug-lab-thumbnail.png",
+            tags: ["HTML", "Web tool"],
             link: "#",
           },
           {
