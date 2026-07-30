@@ -107,7 +107,7 @@ export default function Home() {
             description: "A tiny, single-file web tool that converts text to and from URL slugs.",
             imageSrc: "slug-lab-thumbnail.png",
             tags: ["HTML", "Web tool"],
-            link: "#",
+            link: "https://slug-lab.vercel.app/",
           },
           {
             title: "Quiz System",
